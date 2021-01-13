@@ -1,15 +1,13 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import constate from 'constate'
 
 const useSearch = () => {
 
-    const [searchInput, setSearchInput] = useState("")
-
+    const [countries, setCountries] = useState([])
     return {
-        searchInput,
-        setSearchInput
+        countries,
+        setCountries
     }
-
 }
 
 export const [SearchProvider, useSearchContext] = constate(useSearch)

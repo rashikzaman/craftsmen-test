@@ -10,20 +10,20 @@ const useApi = (function () {
      * @param {*} payload 
      */
     const callApi = (url, method, payload) => {
-
-        const baseUrl = ''
         const result = axios({
             method: method || "get",
-            url: `${baseUrl}/${url}`,
+            url: url,
             data: {
                 ...payload,
             },
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            }
         }).then((response) => {
             return response.data
         }).catch((e) => {
             if (e.response) {
-                if (e.response.status == '401')
-                    throw new apiError(e.response.status, e.response.data.message)
+                throw new apiError(e.response.status, e.response.data.message)
             }
             else
                 throw new apiError(400, "Network error!");
