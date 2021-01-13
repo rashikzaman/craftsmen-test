@@ -22,11 +22,6 @@ const useSearch = () => {
             alert(e.message)
         }
     }
-
-    React.useEffect(() => {
-        console.log(countries)
-    }, [countries])
-
     return {
         searchByCapital
     }

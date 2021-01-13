@@ -4,9 +4,12 @@ import constate from 'constate'
 const useSearch = () => {
 
     const [countries, setCountries] = useState([])
+    const [selectedCountry, setSelectedCountry] = useState(null)
     return {
         countries,
-        setCountries
+        setCountries,
+        selectedCountry,
+        setSelectedCountry
     }
 }
 

@@ -11,10 +11,13 @@ export default function SearchInput() {
     }
 
     return (
-        <form onSubmit={handleForm}>
-            <input name="search"
-                value={searchInput}
-                onChange={e => setSearchInput(e.target.value)} />
-        </form>
+        <div>
+            <p>Search By Capital</p>
+            <form onSubmit={handleForm}>
+                <input name="search"
+                    value={searchInput}
+                    onChange={e => setSearchInput(e.target.value)} />
+            </form>
+        </div>
     )
 }

@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import {SearchProvider} from 'contexts/SearchContext'
+import { SearchProvider } from 'contexts/SearchContext'
 import SearchInput from 'components/SearchInput';
+import SearchResult from 'components/SearchResult';
 
 function App() {
   return (
     <SearchProvider>
-      <div className="App">
-       <SearchInput />
+      <div className="app">
+        <SearchInput />
+        <SearchResult />
       </div>
     </SearchProvider>
   );
