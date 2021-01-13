@@ -13,7 +13,6 @@ const useSearch = () => {
      */
     const searchByCapital = async (input) => {
         try {
-            console.log(input)
             const result = await callApi(`https://restcountries.eu/rest/v2/capital/${input}`)
             if (result) {
                 setCountries([...result])

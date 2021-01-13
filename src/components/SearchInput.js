@@ -7,7 +7,7 @@ export default function SearchInput() {
 
     const handleForm = (e) => {
         e.preventDefault()
-        searchByCapital(searchInput)
+        if(searchInput)searchByCapital(searchInput) //only call if search has input
     }
 
     return (
